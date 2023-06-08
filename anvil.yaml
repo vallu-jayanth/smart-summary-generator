@@ -1,0 +1,15 @@
+allow_embedding: false
+package_name: Youtube_summary_generator
+name: Youtube summary generator
+startup_form: Form1
+renamed: true
+runtime_options:
+  version: 2
+  client_version: '3'
+  server_version: python3-sandbox
+  server_spec: {base: python310-datascience}
+dependencies: []
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}

@@ -1,0 +1,3 @@
+openai
+scrapetube
+youtube_transcript_api

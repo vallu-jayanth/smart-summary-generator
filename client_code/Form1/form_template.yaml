@@ -1,0 +1,73 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"ISXJZF":20,"UOKOZE":40,"ELJJQP":20,"ABHEYZ":40}',
+    spacing_below: small, background: 'theme:On Primary'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: 'theme:On Primary
+        Container', visible: true, wrap_on: mobile, col_spacing: medium, spacing_above: none,
+      col_widths: '{}', spacing_below: large, background: 'theme:Primary Container'}
+    name: outlined_card_1
+    layout_properties: {grid_position: 'XECGUK,WWCAUO'}
+    components:
+    - type: RichText
+      properties: {role: null, align: center, tooltip: '', enable_slots: true, border: '',
+        foreground: 'theme:On Primary', visible: true, font_size: 30, content: Youtube Summary Generator,
+        font: '', spacing_above: none, spacing_below: none, data: null, background: '#4f98c6',
+        format: markdown}
+      name: rich_text_1
+      layout_properties: {grid_position: 'TQUGAK,GCMAWD'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: GPT API key, font_size: null, font: '', spacing_above: large,
+      icon_align: left, spacing_below: large, italic: false, background: 'theme:Primary
+        Container', bold: true, underline: false, icon: 'fa:500px'}
+    name: label_1
+    layout_properties: {grid_position: 'INEQFH,ELJJQP', full_width_row: false}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: true, tooltip: '', placeholder: Enter your GPT API key here,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: large, type: text, spacing_below: large, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    name: text_box_1
+    layout_properties: {grid_position: 'INEQFH,ABHEYZ', full_width_row: false}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: Youtube uRL, font_size: null, font: '', spacing_above: large,
+      icon_align: left, spacing_below: large, italic: false, background: 'theme:Primary
+        Container', bold: true, underline: false, icon: 'fa:youtube'}
+    name: label_2
+    layout_properties: {grid_position: 'YTKWRV,ISXJZF'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter your youtube url here.....,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: large, type: text, spacing_below: large, italic: false,
+      background: 'theme:On Primary', bold: false, underline: false}
+    name: text_box_2
+    layout_properties: {grid_position: 'YTKWRV,UOKOZE'}
+  - type: Button
+    properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:On Primary', visible: true, text: Generate Summary, font_size: 17,
+      font: '', spacing_above: large, icon_align: left, spacing_below: large, italic: false,
+      background: '#5dd645', bold: false, underline: false, icon: ''}
+    name: button_1
+    layout_properties: {grid_position: 'ZTUAYM,ADDPLV'}
+    event_bindings: {click: button_1_click}
+  - type: RichText
+    properties: {role: null, align: left, tooltip: '', enable_slots: true, border: '',
+      foreground: '', visible: true, font_size: null, content: '', font: '', spacing_above: small,
+      spacing_below: small, data: null, background: 'theme:Primary Container', format: plain_text}
+    name: rich_text_2
+    layout_properties: {grid_position: 'MAWVEF,PSMIBO'}
+  data_bindings: []
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
